@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - FlexStart Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h4>Marco Calderon</h4>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="index.html#skills">Skills</a></li>
+          <li><a class="nav-link scrollto active" href="index.html#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="resume.html">Resume</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details mt-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-12">
+            <h2>Finance Manager Mobile App</h2>
+          </div>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-8">
+            <img src="assets/img/finance-app-react-native/1.jpg" class="img-fluid" alt="Home screen">
+            <p>This application is an implementation of an external design in React Native. It combines web technologies to offer financial management to the user, inform of expenses and incomes, and shows this information in charts and tables.</p>
+            <p>It is available for running on iOS, Android, and web.</p>
+            <img src="assets/img/finance-app-react-native/2.jpg" class="img-fluid" alt="Home screen">
+            <p>The technology stack used is based on Expo, a framework for using native libraries on React Native for easy deployment into the three platforms (iOS, Android and Web). It uses storage native drivers for persisting information on the device.</p>
+            <p>While it don’t have a backend implementation for storing the data on the cloud, the data layer and service allows this to be ported easily.</p>
+            <p>Insights can be shown in a animated chart inside the application. They are belong to the incomes, outcomes and assets values, and are implemented Victory Charts Native. All the code is well organized to easy for plug-and-play tasks, avoid styles collision and still gives a good performance with lots of information to be displayed.</p>
+            <p>The code is splitted to have React best coding practices in 4 component types: simple, containers, data management and page components. These have been used with TypeScript to ensure data consistency between components and state of application.</p>
+            <pre>
+              <code>
+  import React from 'react';
+  import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+  import Transaction from '../../components/Transaction';
+  import { TransactionModel } from '../../models/transaction.model';
+  
+  export interface TransactionContainerProps {
+    transactions: TransactionModel[];
+    onAddClick?: Function;
+  }
+  
+  const TransactionsContainer = (props: TransactionContainerProps) =&gt; {
+    const { transactions, onAddClick } = props;
+    return (
+      &lt;View style={styles.container}&gt;
+        &lt;View style={styles.headerContainer}&gt;
+          &lt;Text style={styles.title}&gt;Transactions&lt;/Text&gt;
+          &lt;TouchableOpacity style={styles.addButton} onPress={() =&gt; onAddClick &amp;&amp; onAddClick()}&gt;
+            &lt;Text style={styles.addButtonText}&gt;Add&lt;/Text&gt;
+          &lt;/TouchableOpacity&gt;
+        &lt;/View&gt;
+        &lt;View style={styles.transactionContainer}&gt;
+          {transactions &amp;&amp; transactions.length &gt; 0 &amp;&amp; transactions.map(t =&gt; &lt;Transaction key={t.id} transaction={t} /&gt;)}
+        &lt;/View&gt;
+      &lt;/View&gt;
+    );
+  }
+  
+  const styles = StyleSheet.create({
+      ...
+  });
+  
+  export default TransactionsContainer;
+              </code>
+            </pre>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#skills">Skills</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#portfolio">Portfolio</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i>Back end development</li>
+              <li><i class="bi bi-chevron-right"></i>Front end development</li>
+              <li><i class="bi bi-chevron-right"></i>REST API development</li>
+              <li><i class="bi bi-chevron-right"></i>Mobile app development</li>
+              <li><i class="bi bi-chevron-right"></i>Database administration</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact</h4>
+            <p>
+              Lorem ipsum
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Marco Calderon</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>

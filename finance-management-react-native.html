@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - FlexStart Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h4>Marco Calderon</h4>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="index.html#skills">Skills</a></li>
+          <li><a class="nav-link scrollto active" href="index.html#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="resume.html">Resume</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details mt-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-lg-8 offset-lg-2">
+            <h2>Finance Management Mobile App</h2>
+          </div>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-8 offset-lg-2">
+            <img src="assets/img/finance-app-react-native/1.jpg" class="img-fluid" alt="Home screen">
+            <p>This application is made for managing financial in a more enterprise way for entrepreneurs that want to manage their incomes, expenses, and asset costs while having this information visible at all times in a user friendly way.</p>
+            <p>It is the implementation of a custom design in React Native, and can run on iOS, Android and the web.</p>
+            <p>This application was made using React Native and Expo, since this wouldn’t use a lot of native libraries and are expected to run on all platforms without making lots of changes. It uses libraries for modal dialogs, charts (Victory Native) and the internal storage of the device.</p>
+            <p>It doesn’t include a backend communication, but as the other projects I’ve made, it is structured to have a service that handle the data itself and could be adapted to include different datasources such as external services. It was developed in TypeScript instead of JavaScript to have the benefits of using a typed superset of the language and avoid runtime issues that could led to unexpected bugs.</p>
+            <p>One of the main goals of this app was to develop an application that is on React Native platform using the least libraries possible. This was due to the possibility to include breaking changes or have divided code for different platforms. While this happened with the charts library (Victory Charts) for developing for the web and for the devices, I was aware of the problems to include external libraries that are not well supported on different platforms or have caveats themselves.</p>
+            <p>The styling and drivers such as the storage were bare React Native and Expo solutions for example. Although, they offer enough functionality to have it behave like a normal native application with some tradeoffs such as not having a translucent status bar and toolbar on iOS. For this application these obstacles were avoided using other solutions that also made this application available for the web. You can see a live demo of this app here.</p>
+            <pre>
+              <code>
+  export interface RoundedButtonProps {
+    color: string;
+    size: string;
+    type?: string;
+    text?: string;
+    children?: ReactNode[] | ReactNode | undefined;
+    onClick?: Function;
+    style?: any;
+  }
+  
+  const RoundedButton = (props: RoundedButtonProps) =&gt; {
+    const { color, size, text, onClick, style, type } = props;
+  
+    return (
+      &lt;TouchableOpacity style={[styles.container, style, buttonStyles(color, size, type)]} onPress={() =&gt; onClick &amp;&amp; onClick()}&gt;
+        &lt;Text style={[styles.title, textStyles(color, size, type)]}&gt;
+          {text}
+        &lt;/Text&gt;
+      &lt;/TouchableOpacity&gt;
+    );
+  }
+  
+  const styles = StyleSheet.create({
+    container: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      paddingLeft: 25,
+      paddingRight: 25,
+      borderWidth: 2,
+    },
+    title: {
+      fontSize: 10,
+      color: '#fff',
+    },
+  });
+  
+  export default RoundedButton;
+              </code>
+            </pre>
+            <p>The above screenshot shows an example of how a component looks like in a basic form. It also complies with a common pattern for React applications - Component / Container / Page. It was used in a similar form I’ve used in my Finance Mobile App made with Ionic and Angular. As this offers many benefits of reusability and testeability, it was chosen along with a TypeScript template to ensure that every component has their properties well stablished and therefore help other developers or my future self to understand the code easier and gracefully shows errors on compilation time.</p>
+            <p>It also uses a CSS-like solution for styling that is bundled with React Native. It resembles CSS, but unlike CSS or even CSS-in-JS libraries, this transforms the code into a readable format accroding to the platform (iOS, Android or Web). As such some properties of CSS are not present here - like box-shadow. But it has representation for specific platforms - on iOS being shadowBlur, shadowOffset, and on Android elevation.</p>
+            <p>One thing I should mention here is that the usage of Victory Charts for the different platforms led me to explore a functionality of React Native that chooses a file depending on the compilation target - for web, it takes the .web.ts and for other platforms it uses the normal .ts files. This is pretty neat as this solves the problem of having two different libraries according to the target (web or mobile device).</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#skills">Skills</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#portfolio">Portfolio</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i>Back end development</li>
+              <li><i class="bi bi-chevron-right"></i>Front end development</li>
+              <li><i class="bi bi-chevron-right"></i>REST API development</li>
+              <li><i class="bi bi-chevron-right"></i>Mobile app development</li>
+              <li><i class="bi bi-chevron-right"></i>Database administration</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact</h4>
+            <p>
+              Lorem ipsum
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Marco Calderon</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>

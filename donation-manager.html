@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - FlexStart Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h4>Marco Calderon</h4>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="index.html#skills">Skills</a></li>
+          <li><a class="nav-link scrollto active" href="index.html#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="resume.html">Resume</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details mt-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-lg-8 offset-lg-2">
+            <h2>Donation Manager Web App</h2>
+            <a href="https://donately.com/" class="btn btn-outline btn-primary">Link</a>
+          </div>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-8 offset-lg-2">
+            <img src="assets/img/donately.jpg" class="img-fluid" alt="Home screen">
+            <p>I took part on the development of a Donation manager web app called Donately, which allows users to handle payment processing, information, and provides a dashboard to handle campaigns and notifications for donators. Donately is a humanitarian non-profit organization.</p>
+            <p>The application is made in React and uses Redux, TailWindCSS and custom WebPack configuration under-the-hood.</p>
+            <p>My tasks were principally optimize the performance of front end alleviating some of the requests being sent to the backend. When I first analyzed the web application, the loading times and TTI (Time To Interactive) were not so great because it loaded repeated information even though it used a store in Redux for maintaining the sate of the application. What I did for them was also optimizing the loading times by decreasing the initial bundle of the React application to a more lightweight one while maintaining the performance at my priority.</p>
+            <p>I used a library called Redux-Thunk to solve this issue. It offers a way to dispatch asynchronous actions using the Redux store by creating actions through functions. Also a caching mechanism was used to invalidate the data after certain minutes so the data would be refreshed timely. By detecting the issue here I needed to make major changes to the action dispatchers, some of the Containers and also Components for having a placeholder while the data was being loaded.</p>
+            <p>The other thing I mentioned for optimizing the application was reducing the initial bundle size by implementing code splitting and lazy loaded components by implementing React Suspense. It helped to reduce the initial loading from the original 10 seconds to only 2, as it only loaded the components that were required instead of having all the bundle available at the beginning.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#skills">Skills</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#portfolio">Portfolio</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i>Back end development</li>
+              <li><i class="bi bi-chevron-right"></i>Front end development</li>
+              <li><i class="bi bi-chevron-right"></i>REST API development</li>
+              <li><i class="bi bi-chevron-right"></i>Mobile app development</li>
+              <li><i class="bi bi-chevron-right"></i>Database administration</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact</h4>
+            <p>
+              Lorem ipsum
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Marco Calderon</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

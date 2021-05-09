@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - FlexStart Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h4>Marco Calderon</h4>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="index.html#skills">Skills</a></li>
+          <li><a class="nav-link scrollto active" href="index.html#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="resume.html">Resume</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details mt-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-8 offset-lg-2">
+            <h2>Finance Mobile App</h2>
+            <a href="https://github.com/flexocarpius/finance-app-ios" class="btn btn-secondary">GitHub Repository</a>
+            <a href="http://finance-app-ios.vercel.app/" class="btn btn-outline btn-primary">Live demo</a>
+          </div>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-8 offset-lg-2">
+            <img src="assets/img/finance-app-ionic/1.jpg" class="img-fluid" alt="Home screen">
+            <p>A finance mobile app style implemented into Ionic Framework for iOS and Android devices, and potentially for web, that offers the user to manage their savings and expenses while having the information at hand at all times.</p>
+            <p>It also gives insights and statistics of your savings and expenses in tables and categories so you will have them organized.</p>
+            <p>The mobile app is made using Ionic Framework v5 and Angular 11. It is structured to obtain data from a service although is not yet implemented, but the models exists to adapt the data for the existing components. It also has implemented a storage mechanism to save the information to the persistence state of the device instead of using localStorage (when in web it fallbacks to IndexedDB).</p>
+            <p>The scope of this app was to develop the application for iOS devices only, but it fully supports Android and web, and can be found in the link above or by clicking here.</p>
+            <p>The CSS was not provided for this application, so styles should be created to conform to the design. The library used for showing charts is Chart.js as it is very straightforward to use and allows configuration of the data and colors that are displayed on it. The donut chart used here shows sample data that could be easily obtained from an external service - the application is structured for requesting data so it would be simple to attach an external REST API for this to save the data to the cloud.</p>
+            <p>It implements the Sandbox pattern, in which the application uses a shared service across the components that obtain data independently of the location of it - could be retrieved locally from the device or obtained from a service. This is the main purpose of this pattern, because the back end was not provided in this case but it can be plugged in without too much hussle.</p>
+            <pre>
+              <code>
+  @Component({
+    selector: 'app-analytics',
+    templateUrl: './analytics.page.html',
+    styleUrls: ['./analytics.page.scss'],
+  })
+  export class AnalyticsPage implements OnInit {
+    categories: CategoryModel[];
+  
+    constructor(private sb: SandboxService) { }
+  
+    ngOnInit() {
+      const chartData = this.sb.getChartData();
+      this.initChart(chartData.labels, chartData.data);
+  
+      this.categories = this.sb.getCategories();
+    }
+  }
+              </code>
+            </pre>
+            <p>In Angular, it is also important to follow some criteria when building applications to ensure that code footprint is minimized, performance is increased and reusability is primordial. With this in mind, the application’s architecture was made based on Components / Containers / Pages, with their own styles, so the Components are the basic piece of the app, only containing stateful behavior when needed and not modify the app state internally. They are used by Containers, which they can request data and pass down to components. Lastly, Pages use Containers for structuring the data inside every screen that is shown on the device.</p>
+            <p>This pattern ensures that there are no side effects made by Components (since it prevents the application to be tested successfully) and it can lead to errors and unexpected behavior. In the same way, Containers can be tested against the data independently of the Components that they render.</p>
+            <p>This also introduces new benefits for mobile and web applications - they can be lazy loaded, tested with tools such as Karma and Storybook, and sepparates the styles from components that are not related. This way we can build fully extensible and scalable apps that are performant and resilient to changes because the logic that lies behind of the project exists only on the parts that are important, similar to the separations of concerns principle of SOLID.</p>
+            <p>One of the challenges of every mobile and web application is confront the changes with the least time possible and avoid making changes on places that are not related to it. In a team context, this also means that every developer can understand the changes and the files normally don’t conflict with other’s work - thus leading to a faster development environment and less stress and frustration for the team player.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#skills">Skills</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#portfolio">Portfolio</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i>Back end development</li>
+              <li><i class="bi bi-chevron-right"></i>Front end development</li>
+              <li><i class="bi bi-chevron-right"></i>REST API development</li>
+              <li><i class="bi bi-chevron-right"></i>Mobile app development</li>
+              <li><i class="bi bi-chevron-right"></i>Database administration</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact</h4>
+            <p>
+              Lorem ipsum
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Marco Calderon</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - FlexStart Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h4>Marco Calderon</h4>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="index.html#skills">Skills</a></li>
+          <li><a class="nav-link scrollto active" href="index.html#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="resume.html">Resume</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details mt-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-lg-8 offset-lg-2">
+            <h2>Collaborative GIS Web App</h2>
+            <a href="https://matidor.com/" class="btn btn-outline btn-primary">Link</a>
+          </div>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-8 offset-lg-2">
+            <img src="assets/img/matidor.jpg" class="img-fluid" alt="Home screen">
+            <p>I took part of the development of a collaborative GIS web application focused on companies that relies on location-based solutions to be organized and notified about issues. It also offers budget and costs management.</p>
+            <p>The service is called Matidor, and it is based in Vancouver, Canada.</p>
+            <p>The main application functionality was already present when I joined the team, so I offered my expertise, give development advices regarding some changes and developed an admin dashboard that helped the management of the users, companies, and overall data of the application. It is built on Angular with the usage of NgRx library for the state management. The admin dashboard was also built with Angular, and used Boostrap for styling.</p>
+            <p>One of the things I learned while I worked with the team are some patterns that are common for enterprise ready solutions - such as Effects library usage with NgRx. State management here apply modern front end frameworks best practices, to avoid issues like passing down props very deep in the component tree. This was also the case for requesting the same information to the service. Effects library makes it easy to implement business logic code that executes in a stream of actions - just as the NgRx library works with the RxJs core - and react to changes of it instead of just relying on the state. This allows to dispatch different actions known as side effects, such as show an alert when a request has been completed successfully, or trigger a request to the service when certain criteria is met.</p>
+            <p>I also took part on some tasks regarding solving issues and develop features of the GIS map. One of this was taking the points of interests and display them when certain filter are applied to it. Archived projects is one example of it. These weren’t present on the map due to the bussiness logic filtered them out to be displayed as markers. I implemented logic over this to ensure that these points were displayed in a different layer of the map, helping a user to move from archive/unarchive state to the contrary and show on the map with different marker types.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#skills">Skills</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#portfolio">Portfolio</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i>Back end development</li>
+              <li><i class="bi bi-chevron-right"></i>Front end development</li>
+              <li><i class="bi bi-chevron-right"></i>REST API development</li>
+              <li><i class="bi bi-chevron-right"></i>Mobile app development</li>
+              <li><i class="bi bi-chevron-right"></i>Database administration</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact</h4>
+            <p>
+              Lorem ipsum
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Marco Calderon</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

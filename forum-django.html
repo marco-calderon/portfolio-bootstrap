@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - FlexStart Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h4>Marco Calderon</h4>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="index.html#skills">Skills</a></li>
+          <li><a class="nav-link scrollto active" href="index.html#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="resume.html">Resume</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details mt-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-lg-8 offset-lg-2">
+            <h2>Forum Web App</h2>
+            <a href="https://github.com/flexocarpius/forum-django-react" class="btn btn-secondary">GitHub Repository</a>
+            <a href="https://forum-react-app.vercel.app/forum" class="btn btn-outline btn-primary">Live demo</a>
+          </div>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-8 offset-lg-2">
+            <img src="assets/img/forum-django/1.jpg" class="img-fluid" alt="Home screen">
+            <p>This project allows sharing posts between users of this application, in which they can share thoughts, reply with information and vote for the most useful answer. All in a secure way to ensure data consistency and privacy between users.</p>
+            <p>It is divided into a backend part written in Django and GraphQL and a frontend in React with a custom style made by @threeinfiniteaxes.</p>
+            <p>Forum App is made in Django and GraphQL (Graphene library) to provide a scalable API for any client, web based and mobile if neccesary. The persistence layer is made using PostgreSQL and Django Models. Secure login is also present in form of JWT which is supported by the front end. In addition, it manages the creation of replies to ensure data consistency on the database,</p>
+            <p>The React application uses Apollo GraphQL client to connect with the backend service. Internally it uses a cache mechanism which ensures the latest data without making unnecessary requests that is provided from the same library. The security is managed under-the-hood for creating resources, such as posts or replies. For voting, it also ensures consistency to avoid multiple votes for the same user and same reply or post.</p>
+            <p>Under the hood, it uses styled-components library for a CSS-in-JS solution inside React. What is CSS-in-JS? It is a combination of properties similar to CSS inside JavaScript code that ultimately will be converted to plain CSS but offering the capabilities of adding functions, adapt to property changes in real time with changes of the state of the application and more. It is like giving programming features to styles that in plain CSS or SCSS are not possible to implement.</p>
+            <p>While this makes the code highly coupled into your style, it offers many benefits - many more compared to what I’ve mentioned. It also makes the CSS and functions testable, so it is rather beneficial at the long run rather than perjudicial. At the beginning it takes time to be accustom, more if you come from a CSS only background, but you’ll see and take the benefits right away.</p>
+            <p>Styled-components library offers creating components in a React way with also offering the option to pass down properties that could change the style of it, without coding a lot. This also offers the option to distribute the usage of the components inside the application and adapt to styles according to the context of it. This is the main reason here that I decided to use this library.</p>
+            <p>On the other hand, it is somehow difficult to implement basic responsive behavior using this approach. So a combination of CSS/SCSS with CSS-in-JS is also acceptable at this point, or use hooks to react for width changes of the viewport and display the correct version according to the screen size. This is one of the main challenges of this project for rendering in displays other than desktop or tablet size.</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#services">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#skills">Skills</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#portfolio">Portfolio</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i>Back end development</li>
+              <li><i class="bi bi-chevron-right"></i>Front end development</li>
+              <li><i class="bi bi-chevron-right"></i>REST API development</li>
+              <li><i class="bi bi-chevron-right"></i>Mobile app development</li>
+              <li><i class="bi bi-chevron-right"></i>Database administration</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact</h4>
+            <p>
+              Lorem ipsum
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Marco Calderon</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
