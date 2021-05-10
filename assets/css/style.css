@@ -2381,3 +2381,7 @@ section {
 a i {
   font-size: 18px;
 }
+
+.hljs {
+  border-radius: 12px;
+}
