@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - FlexStart Bootstrap Template</title>
+  <title>Finance Management React Native - Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -52,26 +52,32 @@
   </header>
 
   <main id="main">
-
-    <!-- ======= Portfolio Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details mt-5">
       <div class="container">
         <div class="row mb-4">
           <div class="col-lg-8 offset-lg-2">
-            <h2>Finance Management Mobile App</h2>
+            <div class="d-flex flex-wrap justify-content-between mb-2">
+              <h2 class="font-weight-bold">Finance Management Mobile App</h2>
+              <div class="links-container">
+                <a href="https://github.com/flexocarpius/finance-app-react-native" target="_blank" class="btn btn-secondary d-inline-flex align-items-center justify-content-center"><span>Repository</span>&nbsp;<i class="bi bi-github"></i></a>
+              </div>
+            </div>
+            <div class="mb-2">
+              <span class="badge bg-warning">React Native</span>
+            </div>
           </div>
         </div>
         <div class="row gy-4">
           <div class="col-lg-8 offset-lg-2">
-            <img src="assets/img/finance-app-react-native/1.jpg" class="img-fluid" alt="Home screen">
-            <p>This application is made for managing financial in a more enterprise way for entrepreneurs that want to manage their incomes, expenses, and asset costs while having this information visible at all times in a user friendly way.</p>
-            <p>It is the implementation of a custom design in React Native, and can run on iOS, Android and the web.</p>
-            <p>This application was made using React Native and Expo, since this wouldn’t use a lot of native libraries and are expected to run on all platforms without making lots of changes. It uses libraries for modal dialogs, charts (Victory Native) and the internal storage of the device.</p>
-            <p>It doesn’t include a backend communication, but as the other projects I’ve made, it is structured to have a service that handle the data itself and could be adapted to include different datasources such as external services. It was developed in TypeScript instead of JavaScript to have the benefits of using a typed superset of the language and avoid runtime issues that could led to unexpected bugs.</p>
-            <p>One of the main goals of this app was to develop an application that is on React Native platform using the least libraries possible. This was due to the possibility to include breaking changes or have divided code for different platforms. While this happened with the charts library (Victory Charts) for developing for the web and for the devices, I was aware of the problems to include external libraries that are not well supported on different platforms or have caveats themselves.</p>
-            <p>The styling and drivers such as the storage were bare React Native and Expo solutions for example. Although, they offer enough functionality to have it behave like a normal native application with some tradeoffs such as not having a translucent status bar and toolbar on iOS. For this application these obstacles were avoided using other solutions that also made this application available for the web. You can see a live demo of this app here.</p>
-            <pre>
-              <code>
+          <img src="assets/img/finance-app-react-native/1.jpg" class="img-fluid mb-4" alt="Home screen">
+          <p>This application is made for managing financial in a more enterprise way for entrepreneurs that want to manage their incomes, expenses, and asset costs while having this information visible at all times in a user friendly way.</p>
+          <p>It is the implementation of a custom design in React Native, and can run on iOS, Android and the web.</p>
+          <p>This application was made using React Native and Expo, since this wouldn’t use a lot of native libraries and are expected to run on all platforms without making lots of changes. It uses libraries for modal dialogs, charts (Victory Native) and the internal storage of the device.</p>
+          <p>It doesn’t include a backend communication, but as the other projects I’ve made, it is structured to have a service that handle the data itself and could be adapted to include different datasources such as external services. It was developed in TypeScript instead of JavaScript to have the benefits of using a typed superset of the language and avoid runtime issues that could led to unexpected bugs.</p>
+          <p>One of the main goals of this app was to develop an application that is on React Native platform using the least libraries possible. This was due to the possibility to include breaking changes or have divided code for different platforms. While this happened with the charts library (Victory Charts) for developing for the web and for the devices, I was aware of the problems to include external libraries that are not well supported on different platforms or have caveats themselves.</p>
+          <p>The styling and drivers such as the storage were bare React Native and Expo solutions for example. Although, they offer enough functionality to have it behave like a normal native application with some tradeoffs such as not having a translucent status bar and toolbar on iOS. For this application these obstacles were avoided using other solutions that also made this application available for the web. You can see a live demo of this app here.</p>
+          <pre class="mb-2">
+            <code>
   export interface RoundedButtonProps {
     color: string;
     size: string;
@@ -115,6 +121,28 @@
             <p>The above screenshot shows an example of how a component looks like in a basic form. It also complies with a common pattern for React applications - Component / Container / Page. It was used in a similar form I’ve used in my Finance Mobile App made with Ionic and Angular. As this offers many benefits of reusability and testeability, it was chosen along with a TypeScript template to ensure that every component has their properties well stablished and therefore help other developers or my future self to understand the code easier and gracefully shows errors on compilation time.</p>
             <p>It also uses a CSS-like solution for styling that is bundled with React Native. It resembles CSS, but unlike CSS or even CSS-in-JS libraries, this transforms the code into a readable format accroding to the platform (iOS, Android or Web). As such some properties of CSS are not present here - like box-shadow. But it has representation for specific platforms - on iOS being shadowBlur, shadowOffset, and on Android elevation.</p>
             <p>One thing I should mention here is that the usage of Victory Charts for the different platforms led me to explore a functionality of React Native that chooses a file depending on the compilation target - for web, it takes the .web.ts and for other platforms it uses the normal .ts files. This is pretty neat as this solves the problem of having two different libraries according to the target (web or mobile device).</p>
+            <div class="row mt-5">
+              <div class="col-lg-4">
+                <div class="post-box box-shadow d-flex flex-column post-prev">
+                  <a href="tracking-manager-django.html">
+                    <div class="post-box box-shadow d-flex flex-column post-next">
+                      <div class="post-img mb-4"><img src="assets/img/t_thumb.jpg" class="img-fluid" alt=""></div>
+                      <h3 class="post-title px-4">Tracking Manager Web App</h3>
+                      <span class="px-4 mb-4"><span>Previous</span>&nbsp;<i class="bi bi-arrow-left"></i></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-4 offset-lg-4">
+                <a href="link-reminder.html">
+                  <div class="post-box box-shadow d-flex flex-column post-next">
+                    <div class="post-img mb-4"><img src="assets/img/link-reminder/thumb.jpg" class="img-fluid" alt=""></div>
+                    <h3 class="post-title px-4">Link Reminder Web App</h3>
+                    <span class="px-4 mb-4"><span>Next</span>&nbsp;<i class="bi bi-arrow-right"></i></span>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
 
         </div>

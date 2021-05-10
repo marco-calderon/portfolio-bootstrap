@@ -2377,3 +2377,7 @@ section {
 .flex-basis-100 {
   flex-basis: 100%;
 }
+
+a i {
+  font-size: 18px;
+}

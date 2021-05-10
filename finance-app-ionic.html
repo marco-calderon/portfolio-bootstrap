@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - FlexStart Bootstrap Template</title>
+  <title>Finance Mobile App - Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -58,21 +58,29 @@
       <div class="container">
         <div class="row mb-4">
           <div class="col-8 offset-lg-2">
-            <h2>Finance Mobile App</h2>
-            <a href="https://github.com/flexocarpius/finance-app-ios" class="btn btn-secondary">GitHub Repository</a>
-            <a href="http://finance-app-ios.vercel.app/" class="btn btn-outline btn-primary">Live demo</a>
+            <div class="d-flex flex-wrap justify-content-between mb-2">
+              <h2 class="font-weight-bold">Finance Mobile App</h2>
+              <div class="links-container">
+                <a href="https://github.com/flexocarpius/finance-app-ios" target="_blank" class="btn btn-secondary d-inline-flex align-items-center justify-content-center"><span>Repository</span>&nbsp;<i class="bi bi-github"></i></a>
+                <a href="http://finance-app-ios.vercel.app/" target="_blank" class="btn btn-outline btn-primary d-inline-flex align-items-center justify-content-center"><span>Demo</span>&nbsp;<i class="bi bi-window"></i></a>
+              </div>
+            </div>
+            <div class="mb-2">
+              <span class="badge bg-danger">Angular</span>
+              <span class="badge bg-info">Ionic</span>
+            </div>
           </div>
         </div>
         <div class="row gy-4">
           <div class="col-lg-8 offset-lg-2">
-            <img src="assets/img/finance-app-ionic/1.jpg" class="img-fluid" alt="Home screen">
+            <img src="assets/img/finance-app-ionic/1.jpg" class="img-fluid mb-4" alt="Home screen">
             <p>A finance mobile app style implemented into Ionic Framework for iOS and Android devices, and potentially for web, that offers the user to manage their savings and expenses while having the information at hand at all times.</p>
             <p>It also gives insights and statistics of your savings and expenses in tables and categories so you will have them organized.</p>
             <p>The mobile app is made using Ionic Framework v5 and Angular 11. It is structured to obtain data from a service although is not yet implemented, but the models exists to adapt the data for the existing components. It also has implemented a storage mechanism to save the information to the persistence state of the device instead of using localStorage (when in web it fallbacks to IndexedDB).</p>
             <p>The scope of this app was to develop the application for iOS devices only, but it fully supports Android and web, and can be found in the link above or by clicking here.</p>
             <p>The CSS was not provided for this application, so styles should be created to conform to the design. The library used for showing charts is Chart.js as it is very straightforward to use and allows configuration of the data and colors that are displayed on it. The donut chart used here shows sample data that could be easily obtained from an external service - the application is structured for requesting data so it would be simple to attach an external REST API for this to save the data to the cloud.</p>
             <p>It implements the Sandbox pattern, in which the application uses a shared service across the components that obtain data independently of the location of it - could be retrieved locally from the device or obtained from a service. This is the main purpose of this pattern, because the back end was not provided in this case but it can be plugged in without too much hussle.</p>
-            <pre>
+            <pre class="mb-4">
               <code>
   @Component({
     selector: 'app-analytics',
@@ -97,6 +105,28 @@
             <p>This pattern ensures that there are no side effects made by Components (since it prevents the application to be tested successfully) and it can lead to errors and unexpected behavior. In the same way, Containers can be tested against the data independently of the Components that they render.</p>
             <p>This also introduces new benefits for mobile and web applications - they can be lazy loaded, tested with tools such as Karma and Storybook, and sepparates the styles from components that are not related. This way we can build fully extensible and scalable apps that are performant and resilient to changes because the logic that lies behind of the project exists only on the parts that are important, similar to the separations of concerns principle of SOLID.</p>
             <p>One of the challenges of every mobile and web application is confront the changes with the least time possible and avoid making changes on places that are not related to it. In a team context, this also means that every developer can understand the changes and the files normally don’t conflict with other’s work - thus leading to a faster development environment and less stress and frustration for the team player.</p>
+            <div class="row mt-5">
+              <div class="col-lg-4">
+                <div class="post-box box-shadow d-flex flex-column post-prev">
+                  <a href="forum-django.html">
+                    <div class="post-box box-shadow d-flex flex-column post-next">
+                      <div class="post-img mb-4"><img src="assets/img/forum-django/thumb.jpg" class="img-fluid" alt=""></div>
+                      <h3 class="post-title px-4">Forum Web App</h3>
+                      <span class="px-4 mb-4"><span>Previous</span>&nbsp;<i class="bi bi-arrow-left"></i></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-4 offset-lg-4">
+                <a href="tracking-manager-django.html">
+                  <div class="post-box box-shadow d-flex flex-column post-next">
+                    <div class="post-img mb-4"><img src="assets/img/t_thumb.jpg" class="img-fluid" alt=""></div>
+                    <h3 class="post-title px-4">Tracking Manager Web App</h3>
+                    <span class="px-4 mb-4"><span>Next</span>&nbsp;<i class="bi bi-arrow-right"></i></span>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
 
         </div>

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - FlexStart Bootstrap Template</title>
+  <title>Forum Web App - Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -55,14 +55,23 @@
       <div class="container">
         <div class="row mb-4">
           <div class="col-lg-8 offset-lg-2">
-            <h2>Forum Web App</h2>
-            <a href="https://github.com/flexocarpius/forum-django-react" class="btn btn-secondary">GitHub Repository</a>
-            <a href="https://forum-react-app.vercel.app/forum" class="btn btn-outline btn-primary">Live demo</a>
+            <div class="d-flex flex-wrap justify-content-between mb-2">
+              <h2 class="font-weight-bold">Forum Web App</h2>
+              <div class="links-container">
+                <a href="https://github.com/flexocarpius/forum-django-react" target="_blank" class="btn btn-secondary d-inline-flex align-items-center justify-content-center"><span>Repository</span>&nbsp;<i class="bi bi-github"></i></a>
+                <a href="https://forum-react-app.vercel.app/forum" target="_blank" class="btn btn-outline btn-primary d-inline-flex align-items-center justify-content-center"><span>Demo</span>&nbsp;<i class="bi bi-window"></i></a>
+              </div>
+            </div>
+            <div class="mb-2">
+              <span class="badge bg-success">Django</span>
+              <span class="badge bg-info">React</span>
+              <span class="badge bg-warning">GraphQL</span>
+            </div>
           </div>
         </div>
         <div class="row gy-4">
           <div class="col-lg-8 offset-lg-2">
-            <img src="assets/img/forum-django/1.jpg" class="img-fluid" alt="Home screen">
+            <img src="assets/img/forum-django/1.jpg" class="img-fluid mb-4" alt="Home screen">
             <p>This project allows sharing posts between users of this application, in which they can share thoughts, reply with information and vote for the most useful answer. All in a secure way to ensure data consistency and privacy between users.</p>
             <p>It is divided into a backend part written in Django and GraphQL and a frontend in React with a custom style made by @threeinfiniteaxes.</p>
             <p>Forum App is made in Django and GraphQL (Graphene library) to provide a scalable API for any client, web based and mobile if neccesary. The persistence layer is made using PostgreSQL and Django Models. Secure login is also present in form of JWT which is supported by the front end. In addition, it manages the creation of replies to ensure data consistency on the database,</p>
@@ -71,6 +80,28 @@
             <p>While this makes the code highly coupled into your style, it offers many benefits - many more compared to what I’ve mentioned. It also makes the CSS and functions testable, so it is rather beneficial at the long run rather than perjudicial. At the beginning it takes time to be accustom, more if you come from a CSS only background, but you’ll see and take the benefits right away.</p>
             <p>Styled-components library offers creating components in a React way with also offering the option to pass down properties that could change the style of it, without coding a lot. This also offers the option to distribute the usage of the components inside the application and adapt to styles according to the context of it. This is the main reason here that I decided to use this library.</p>
             <p>On the other hand, it is somehow difficult to implement basic responsive behavior using this approach. So a combination of CSS/SCSS with CSS-in-JS is also acceptable at this point, or use hooks to react for width changes of the viewport and display the correct version according to the screen size. This is one of the main challenges of this project for rendering in displays other than desktop or tablet size.</p>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="post-box box-shadow d-flex flex-column post-prev">
+                  <a href="admin-dashboard-react.html">
+                    <div class="post-box box-shadow d-flex flex-column post-next">
+                      <div class="post-img mb-4"><img src="assets/img/admin-dashboard-react/thumb.jpg" class="img-fluid" alt=""></div>
+                      <h3 class="post-title px-4">Admin Dashboard</h3>
+                      <span class="px-4 mb-4"><span>Previous</span>&nbsp;<i class="bi bi-arrow-left"></i></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-4 offset-lg-4">
+                <a href="finance-app-ionic.html">
+                  <div class="post-box box-shadow d-flex flex-column post-next">
+                    <div class="post-img mb-4"><img src="assets/img/finance-app-ionic/thumb.jpg" class="img-fluid" alt=""></div>
+                    <h3 class="post-title px-4">Finance Mobile App</h3>
+                    <span class="px-4 mb-4"><span>Next</span>&nbsp;<i class="bi bi-arrow-right"></i></span>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 

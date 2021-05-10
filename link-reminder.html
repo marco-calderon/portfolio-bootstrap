@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - FlexStart Bootstrap Template</title>
+  <title>Link Reminder Web App - Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -58,22 +58,31 @@
       <div class="container">
         <div class="row mb-4">
           <div class="col-lg-8 offset-lg-2">
-            <h2>Link Reminder Web App</h2>
-            <a href="https://github.com/flexocarpius/link-reminder-angular" class="btn btn-secondary">GitHub Repository</a>
-            <a href="https://link-reminder-angular.vercel.app/" class="btn btn-outline btn-primary">Live demo</a>
+            <div class="d-flex flex-wrap justify-content-between mb-2">
+              <h2 class="font-weight-bold">Link Reminder Web App</h2>
+              <div class="links-container">
+                <a href="https://github.com/flexocarpius/link-reminder-angular" target="_blank" class="btn btn-secondary d-inline-flex align-items-center justify-content-center"><span>Repository</span>&nbsp;<i class="bi bi-github"></i></a>
+                <a href="https://link-reminder-angular.vercel.app/" target="_blank" class="btn btn-outline btn-primary d-inline-flex align-items-center justify-content-center"><span>Demo</span>&nbsp;<i class="bi bi-window"></i></a>
+              </div>
+            </div>
+            <div class="mb-2">
+              <span class="badge bg-danger">Angular</span>
+              <span class="badge bg-warning">Node.js</span>
+              <span class="badge bg-info">Pusher</span>
+            </div>
           </div>
         </div>
         <div class="row gy-4">
           <div class="col-lg-8 offset-lg-2">
-            <img src="assets/img/link-reminder/1.jpg" class="img-fluid" alt="Home screen">
+            <img src="assets/img/link-reminder/1.jpg" class="img-fluid mb-4" alt="Home screen">
             <p>An application made for people who likes to share links for oneself and constantly changes its focus from computer to other devices. It allows to see in real time the links that are being shared to oneself and can be opened right away.</p>
             <p>It offers secure login, easy configuration and no hussle for links - just share them and open them, no more. Simplicity for the task.</p>
             <p>The application was made for Angular as the frontend and a Node.js service as the backend, developed in the Nest.js technology. This allows for a easy deployment to serverless or server contexts and work performantly. The frontend consists of custom components and integration of Pusher API for real time notifications, JWT as the secure layer for users, and it allows updating and deleting links on the fly with the communication through a REST API.</p>
             <p>The Node.js backend offers the point of communication and JWT handling to ensure data consistency and privacy of user’s data, filtering and handling the real time communication with the same Pusher API. The persistence layer is provided by it and a connection to a MongoDB instance that stores users information encrypted and their links. The Nest.js also offers typed capabilities with the TypeScript superset of Javascript.</p>
-            <img src="assets/img/link-reminder/2.jpg" class="img-fluid" alt="Home screen">
+            <img src="assets/img/link-reminder/2.jpg" class="img-fluid mb-4" alt="Home screen">
             <p>As the scope of the project was the simplicity, the API only offers the neccessary - add, update, delete links. The Pusher API serves as the real time message broker that only shares the important information of the links, such as the date it was created, tags, and the creator. While it wasn’t provided by this service, the backend manages groups that ensures that only the user that sends the link receives it, similar to a tenant based SaaS solution. This way it can be implemented groups in the future for sharing links between users.</p>
             <p>The backend also manages a screenshot component that opens the link with Puppeteer library and renders the website for taking a snapshot of the link, so it will be present in the link after a couple of minutes. The image is stored in a Cloudinary instance but it can be swaped out to a S3 bucket if neccessary. The reference to the taken screenshot is saved then to the MongoDB entry that was created for the link.</p>
-            <pre>
+            <pre class="mb-2">
               <code>
   import * as puppeteer from 'puppeteer-core';
   import * as chrome from 'chrome-aws-lambda';
@@ -101,9 +110,31 @@
             </pre>
             <p>The above screenshot shows the code for the service that takes the screenshot. As you see, this is very similar to what an Angular Service will look like - with the difference that this runs on a Node.js environment and thus can execute functionality of backend. This is why Nest.js is my preferred framework to use when I have to develop a Node.js application, because it offers all the benefits of TypeScript, can run Express, Fastify or another server with it, and of course it provides a very clean sepparation of concerns while having all the code splitted in their respective places. And the best of all - you can run it on a serverless environment or a server one, it will be executed with minimal configuration changes.</p>
             <p>This service runs on Vercel, a platform that allows developers to upload their applications (with a Node.js backend in this case) and have it work on AWS Lambda service. It will handle all the service management to the platform and one can focus on develop instead of doing somewhat complicated DevOps.</p>
-            <img src="assets/img/link-reminder/3.jpg" class="img-fluid" alt="Home screen">
+            <img src="assets/img/link-reminder/3.jpg" class="img-fluid mb-4" alt="Home screen">
             <p>The main challenge of this application was to maintain the security while having it simple. Some libraries are installed to manage the encryption part and the data consistency business logic, but the code to be executed needed to remain very short as it is intended to run on a serverless environment in which the execution time is the metric that we need to minimize to maintain the costs affordable.</p>
             <p>With the usage of Angular and Nest.js this also has the benefit of being testable and scalable. I couldn’t recommend using this combination more for applications that we know beforehand that will have changes and features that are not planned.</p>
+            <div class="row mt-5">
+              <div class="col-lg-4">
+                <div class="post-box box-shadow d-flex flex-column post-prev">
+                  <a href="finance-management-react-native.html">
+                    <div class="post-box box-shadow d-flex flex-column post-next">
+                      <div class="post-img mb-4"><img src="assets/img/finance-app-react-native/thumb.jpg" class="img-fluid" alt=""></div>
+                      <h3 class="post-title px-4">Finance Management React Native</h3>
+                      <span class="px-4 mb-4"><span>Previous</span>&nbsp;<i class="bi bi-arrow-left"></i></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-4 offset-lg-4">
+                <a href="collaborative-gis.html">
+                  <div class="post-box box-shadow d-flex flex-column post-next">
+                    <div class="post-img mb-4"><img src="assets/img/matidor_thumb.jpg" class="img-fluid" alt=""></div>
+                    <h3 class="post-title px-4">Collaborative GIS Web App</h3>
+                    <span class="px-4 mb-4"><span>Next</span>&nbsp;<i class="bi bi-arrow-right"></i></span>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
 
         </div>

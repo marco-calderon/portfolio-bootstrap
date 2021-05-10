@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - FlexStart Bootstrap Template</title>
+  <title>Tracking Manager Web App - Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -55,22 +55,54 @@
       <div class="container">
         <div class="row mb-4">
           <div class="col-8 offset-lg-2">
-            <h2>Tracking Manager Web App</h2>
-            <a href="https://github.com/flexocarpius/tracking-manager-django" class="btn btn-secondary">GitHub Repository</a>
+            <div class="d-flex flex-wrap justify-content-between mb-2">
+              <h2 class="font-weight-bold">Tracking Manager Web App</h2>
+              <div class="links-container">
+                <a href="https://github.com/flexocarpius/tracking-manager-django" target="_blank" class="btn btn-secondary d-inline-flex align-items-center justify-content-center"><span>Repository</span>&nbsp;<i class="bi bi-github"></i></a>
+              </div>
+            </div>
+            <div class="mb-2">
+              <span class="badge bg-success">Django</span>
+              <span class="badge bg-info">Bootstrap</span>
+              <span class="badge bg-warning">Stripe</span>
+              <span class="badge bg-secondary">PayPal</span>
+            </div>
           </div>
         </div>
         <div class="row gy-4">
           <div class="col-lg-8 offset-lg-2">
-            <img src="assets/img/t1.jpg" class="img-fluid" alt="Home screen">
+            <img src="assets/img/t1.jpg" class="img-fluid mb-4" alt="Home screen">
             <p>This project allows customers and clients to buy and sell goods while having the process at hand and giving them the control over the shipment, payment status and delivery state of the product.</p>
             <p>It shows insights about the product sales using Machine Learning algorithms and charts for displaying information for taking action on marketing, management and logistics of their services.</p>
-            <img src="assets/img/t2.jpg" class="img-fluid" alt="Home screen">
+            <img src="assets/img/t2.jpg" class="img-fluid mb-4" alt="Home screen">
             <p>Here Django and Bootstrap were used for showing the information using Django Templates. Also a combination of exposed REST APIs was used for displaying the information in async manner and to have results fast. It uses PostgreSQL as the persistence layer.</p>
             <p>It uses jQuery to retrieve the data for the frontend and display them in charts and tables in a user friendly way. It also handles the interaction for buying/selling products, add them in a shopping cart, and display the insights information.</p>
             <p>It also separates the users by its type (admin, customer, client) and shows different parts according to their role and permissions.</p>
             <p>This application is divided in three sections, according to the given role. Admin has the priviledges for editing the state of the shipment, the payment information, manage other users, revoke permissions, etc. Customers can upload new products, change the state of their products shipment, payment information, stock, and receive insights of their sales. Clients are the end consumers that buy the products from the customers, and have the ability to check the state of the shipment and payment. They can also receive notifications when their products have been updated on the application.</p>
             <p>One of the features that this is application offers is a Machine Learning algorithm for analyze the sales data and give the insights to the customers, so they can have knowledge of the stock to have at certain quarters of the year, have marketing plans and campaigns for their products. This feature was made using Scikit-learn and Pandas.</p>
-            <img src="assets/img/t3.jpg" class="img-fluid" alt="Home screen">
+            <img src="assets/img/t3.jpg" class="img-fluid mb-4" alt="Home screen">
+            <div class="row mt-5">
+              <div class="col-lg-4">
+                <div class="post-box box-shadow d-flex flex-column post-prev">
+                  <a href="finance-app-ionic.html">
+                    <div class="post-box box-shadow d-flex flex-column post-next">
+                      <div class="post-img mb-4"><img src="assets/img/finance-app-ionic/thumb.jpg" class="img-fluid" alt=""></div>
+                      <h3 class="post-title px-4">Finance Mobile App</h3>
+                      <span class="px-4 mb-4"><span>Previous</span>&nbsp;<i class="bi bi-arrow-left"></i></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-4 offset-lg-4">
+                <a href="finance-management-react-native.html">
+                  <div class="post-box box-shadow d-flex flex-column post-next">
+                    <div class="post-img mb-4"><img src="assets/img/finance-app-react-native/thumb.jpg" class="img-fluid" alt=""></div>
+                    <h3 class="post-title px-4">Finance Management Mobile App</h3>
+                    <span class="px-4 mb-4"><span>Next</span>&nbsp;<i class="bi bi-arrow-right"></i></span>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 

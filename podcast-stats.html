@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - FlexStart Bootstrap Template</title>
+  <title>Podcast Stats Web App</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -55,18 +55,40 @@
       <div class="container">
         <div class="row mb-4">
           <div class="col-lg-8 offset-lg-2">
-            <h2>Podcast Stats Web App</h2>
-            <a href="https://podstats.club/" class="btn btn-outline btn-primary">Link</a>
+            <div class="d-flex flex-wrap justify-content-between mb-2">
+              <h2 class="font-weight-bold">Podcast Stats Web App</h2>
+              <div class="links-container">
+                <a href="https://podstats.club/" target="_blank" class="btn btn-primary d-inline-flex align-items-center justify-content-center"><span>Link</span>&nbsp;<i class="bi bi-link"></i></a>
+              </div>
+            </div>
+            <div class="mb-2">
+              <span class="badge bg-success">Django</span>
+              <span class="badge bg-info">Bootstrap</span>
+              <span class="badge bg-secondary">PostgreSQL</span>
+            </div>
           </div>
         </div>
         <div class="row gy-4">
           <div class="col-lg-8 offset-lg-2">
-            <img src="assets/img/podstats.jpg" class="img-fluid" alt="Home screen">
+            <img src="assets/img/podstats.jpg" class="img-fluid mb-4" alt="Home screen">
             <p>I developed a Podcast Statistics web application for showing charts and manage the scrap data results to insert into a database through Django. Made some services that interacted with a frontend made in Bootstrap/jQuery.</p>
             <p>Handled the configuration, deployment, management of local, staging and production stages and environments, DevOps and also configuration of the server in a Digital Ocean Linux server instance.</p>
             <p>This application was made purely in Django and Bootstrap. It uses a PostgreSQL database internally, and reads a file where all the podcasts to obtain information for, updates records daily using CRON jobs through the execution of a script. While the last was already provided, I only took part on make adequations for saving the scrapped data automatically into the database instead of generating a file that the service should consume, this way accelerating the insertion process and avoiding duplications.</p>
             <p>For the charts library I used Chart.js for its simplicity to use and configure. It is also used as the base of a service that generates chart images with almos the same configuration used by the chart (for mail notifications). This allowed us to show the data in a very efficient and descriptive way for the user. I also developed some entry points for a REST API for the front end to obtain the data to display. When using Django, this is a must to make the website responsive because if not, if will only show the website once the data is obtained and parsed from the persistence layer.</p>
             <p>I took part on the DevOps as well. The client provided a Linux instance on Digital Ocean. It was based on Ubuntu and I managed to install the production environment - PostgreSQL instance, Gunicorn, and configure the service to start it manually once a request has been made to the server. I also installed the Django web application using virtual environments as recommended when developing a web application using this framework.</p>
+            <div class="row mt-5">
+              <div class="col-lg-4">
+                <div class="post-box box-shadow d-flex flex-column post-prev">
+                  <a href="donation-manager.html">
+                    <div class="post-box box-shadow d-flex flex-column post-next">
+                      <div class="post-img mb-4"><img src="assets/img/donately_thumb.jpg" class="img-fluid" alt=""></div>
+                      <h3 class="post-title px-4">Donation Manager Web App</h3>
+                      <span class="px-4 mb-4"><span>Previous</span>&nbsp;<i class="bi bi-arrow-left"></i></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>

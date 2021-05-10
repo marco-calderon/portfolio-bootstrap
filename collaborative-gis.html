@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - FlexStart Bootstrap Template</title>
+  <title>Collaborative GIS Web App - Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -55,18 +55,50 @@
       <div class="container">
         <div class="row mb-4">
           <div class="col-lg-8 offset-lg-2">
-            <h2>Collaborative GIS Web App</h2>
-            <a href="https://matidor.com/" class="btn btn-outline btn-primary">Link</a>
+            <div class="d-flex flex-wrap justify-content-between mb-2">
+              <h2 class="font-weight-bold">Finance Management Mobile App</h2>
+              <div class="links-container">
+                <a href="https://matidor.com/" target="_blank" class="btn btn-primary d-inline-flex align-items-center justify-content-center"><span>Link</span>&nbsp;<i class="bi bi-link"></i></a>
+              </div>
+            </div>
+            <div class="mb-2">
+              <span class="badge bg-danger">Angular</span>
+              <span class="badge bg-secondary">GIS</span>
+              <span class="badge bg-warning">NgRx</span>
+              <span class="badge bg-info">Bootstrap</span>
+            </div>
           </div>
         </div>
         <div class="row gy-4">
           <div class="col-lg-8 offset-lg-2">
-            <img src="assets/img/matidor.jpg" class="img-fluid" alt="Home screen">
-            <p>I took part of the development of a collaborative GIS web application focused on companies that relies on location-based solutions to be organized and notified about issues. It also offers budget and costs management.</p>
-            <p>The service is called Matidor, and it is based in Vancouver, Canada.</p>
-            <p>The main application functionality was already present when I joined the team, so I offered my expertise, give development advices regarding some changes and developed an admin dashboard that helped the management of the users, companies, and overall data of the application. It is built on Angular with the usage of NgRx library for the state management. The admin dashboard was also built with Angular, and used Boostrap for styling.</p>
-            <p>One of the things I learned while I worked with the team are some patterns that are common for enterprise ready solutions - such as Effects library usage with NgRx. State management here apply modern front end frameworks best practices, to avoid issues like passing down props very deep in the component tree. This was also the case for requesting the same information to the service. Effects library makes it easy to implement business logic code that executes in a stream of actions - just as the NgRx library works with the RxJs core - and react to changes of it instead of just relying on the state. This allows to dispatch different actions known as side effects, such as show an alert when a request has been completed successfully, or trigger a request to the service when certain criteria is met.</p>
-            <p>I also took part on some tasks regarding solving issues and develop features of the GIS map. One of this was taking the points of interests and display them when certain filter are applied to it. Archived projects is one example of it. These weren’t present on the map due to the bussiness logic filtered them out to be displayed as markers. I implemented logic over this to ensure that these points were displayed in a different layer of the map, helping a user to move from archive/unarchive state to the contrary and show on the map with different marker types.</p>
+          <img src="assets/img/matidor.jpg" class="img-fluid mb-4" alt="Home screen">
+          <p>I took part of the development of a collaborative GIS web application focused on companies that relies on location-based solutions to be organized and notified about issues. It also offers budget and costs management.</p>
+          <p>The service is called Matidor, and it is based in Vancouver, Canada.</p>
+          <p>The main application functionality was already present when I joined the team, so I offered my expertise, give development advices regarding some changes and developed an admin dashboard that helped the management of the users, companies, and overall data of the application. It is built on Angular with the usage of NgRx library for the state management. The admin dashboard was also built with Angular, and used Boostrap for styling.</p>
+          <p>One of the things I learned while I worked with the team are some patterns that are common for enterprise ready solutions - such as Effects library usage with NgRx. State management here apply modern front end frameworks best practices, to avoid issues like passing down props very deep in the component tree. This was also the case for requesting the same information to the service. Effects library makes it easy to implement business logic code that executes in a stream of actions - just as the NgRx library works with the RxJs core - and react to changes of it instead of just relying on the state. This allows to dispatch different actions known as side effects, such as show an alert when a request has been completed successfully, or trigger a request to the service when certain criteria is met.</p>
+          <p>I also took part on some tasks regarding solving issues and develop features of the GIS map. One of this was taking the points of interests and display them when certain filter are applied to it. Archived projects is one example of it. These weren’t present on the map due to the bussiness logic filtered them out to be displayed as markers. I implemented logic over this to ensure that these points were displayed in a different layer of the map, helping a user to move from archive/unarchive state to the contrary and show on the map with different marker types.</p>
+          <div class="row mt-5">
+            <div class="col-lg-4">
+              <div class="post-box box-shadow d-flex flex-column post-prev">
+                <a href="link-reminder.html">
+                  <div class="post-box box-shadow d-flex flex-column post-next">
+                    <div class="post-img mb-4"><img src="assets/img/link-reminder/thumb.jpg" class="img-fluid" alt=""></div>
+                    <h3 class="post-title px-4">Link Reminder Web App</h3>
+                    <span class="px-4 mb-4"><span>Previous</span>&nbsp;<i class="bi bi-arrow-left"></i></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 offset-lg-4">
+              <a href="donation-manager.html">
+                <div class="post-box box-shadow d-flex flex-column post-next">
+                  <div class="post-img mb-4"><img src="assets/img/donately_thumb.jpg" class="img-fluid" alt=""></div>
+                  <h3 class="post-title px-4">Donation Manager Web App</h3>
+                  <span class="px-4 mb-4"><span>Next</span>&nbsp;<i class="bi bi-arrow-right"></i></span>
+                </div>
+              </a>
+            </div>
+          </div>
           </div>
 
         </div>

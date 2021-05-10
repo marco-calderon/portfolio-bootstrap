@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - FlexStart Bootstrap Template</title>
+  <title>Donation Manager Web App - Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -55,18 +55,49 @@
       <div class="container">
         <div class="row mb-4">
           <div class="col-lg-8 offset-lg-2">
-            <h2>Donation Manager Web App</h2>
-            <a href="https://donately.com/" class="btn btn-outline btn-primary">Link</a>
+            <div class="d-flex flex-wrap justify-content-between mb-2">
+              <h2 class="font-weight-bold">Donation Manager Web App</h2>
+              <div class="links-container">
+                <a href="https://donately.com/" target="_blank" class="btn btn-primary d-inline-flex align-items-center justify-content-center"><span>Link</span>&nbsp;<i class="bi bi-link"></i></a>
+              </div>
+            </div>
+            <div class="mb-2">
+              <span class="badge bg-info">React</span>
+              <span class="badge bg-secondary">Redux</span>
+              <span class="badge bg-warning">TailwindCSS</span>
+            </div>
           </div>
         </div>
         <div class="row gy-4">
           <div class="col-lg-8 offset-lg-2">
-            <img src="assets/img/donately.jpg" class="img-fluid" alt="Home screen">
+            <img src="assets/img/donately.jpg" class="img-fluid mb-4" alt="Home screen">
             <p>I took part on the development of a Donation manager web app called Donately, which allows users to handle payment processing, information, and provides a dashboard to handle campaigns and notifications for donators. Donately is a humanitarian non-profit organization.</p>
             <p>The application is made in React and uses Redux, TailWindCSS and custom WebPack configuration under-the-hood.</p>
             <p>My tasks were principally optimize the performance of front end alleviating some of the requests being sent to the backend. When I first analyzed the web application, the loading times and TTI (Time To Interactive) were not so great because it loaded repeated information even though it used a store in Redux for maintaining the sate of the application. What I did for them was also optimizing the loading times by decreasing the initial bundle of the React application to a more lightweight one while maintaining the performance at my priority.</p>
             <p>I used a library called Redux-Thunk to solve this issue. It offers a way to dispatch asynchronous actions using the Redux store by creating actions through functions. Also a caching mechanism was used to invalidate the data after certain minutes so the data would be refreshed timely. By detecting the issue here I needed to make major changes to the action dispatchers, some of the Containers and also Components for having a placeholder while the data was being loaded.</p>
             <p>The other thing I mentioned for optimizing the application was reducing the initial bundle size by implementing code splitting and lazy loaded components by implementing React Suspense. It helped to reduce the initial loading from the original 10 seconds to only 2, as it only loaded the components that were required instead of having all the bundle available at the beginning.</p>
+            <div class="row mt-5">
+              <div class="col-lg-4">
+                <div class="post-box box-shadow d-flex flex-column post-prev">
+                  <a href="link-reminder.html">
+                    <div class="post-box box-shadow d-flex flex-column post-next">
+                      <div class="post-img mb-4"><img src="assets/img/link-reminder/thumb.jpg" class="img-fluid" alt=""></div>
+                      <h3 class="post-title px-4">Link Reminder Web App</h3>
+                      <span class="px-4 mb-4"><span>Previous</span>&nbsp;<i class="bi bi-arrow-left"></i></span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-4 offset-lg-4">
+                <a href="podcast-stats.html">
+                  <div class="post-box box-shadow d-flex flex-column post-next">
+                    <div class="post-img mb-4"><img src="assets/img/podstats_thumb.jpg" class="img-fluid" alt=""></div>
+                    <h3 class="post-title px-4">Podcast Stats Web App</h3>
+                    <span class="px-4 mb-4"><span>Next</span>&nbsp;<i class="bi bi-arrow-right"></i></span>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
 
         </div>

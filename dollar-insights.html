@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Portfolio Details - FlexStart Bootstrap Template</title>
+  <title>Dollar Insights Web App - Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -54,33 +54,68 @@
       <div class="container">
         <div class="row mb-4">
           <div class="col-lg-8 offset-lg-2">
-            <h2>Dollar Insights Web App</h2>
-            <a href="https://github.com/flexocarpius/dollar-scrap-django" class="btn btn-secondary">GitHub Repository</a>
-            <a href="https://dollar-web-app.herokuapp.com/" class="btn btn-outline btn-primary">Live demo</a>
+            <div class="d-flex flex-wrap justify-content-between mb-2">
+              <h2 class="font-weight-bold">Dollar Insights Web App</h2>
+              <div class="links-container">
+                <a href="https://github.com/flexocarpius/dollar-scrap-django" target="_blank" class="btn btn-secondary d-inline-flex align-items-center justify-content-center"><span>Repository</span>&nbsp;<i class="bi bi-github"></i></a>
+                <a href="https://dollar-web-app.herokuapp.com/" target="_blank" class="btn btn-outline btn-primary d-inline-flex align-items-center justify-content-center"><span>Demo</span>&nbsp;<i class="bi bi-window"></i></a>
+              </div>
+            </div>
+            <div class="mb-2">
+              <span class="badge bg-success">Django</span>
+              <span class="badge bg-warning">Selenium</span>
+              <span class="badge bg-info">PostgreSQL</span>
+            </div>
           </div>
         </div>
-        <div class="row gy-4">
+        <div class="row">
           <div class="col-lg-8 offset-lg-2">
-            <img src="assets/img/dollar-insights/1.jpg" class="img-fluid" alt="Home screen">
-              <p>This project was developed for giving the user important details about the comparison between the USD and MXN. It compares its values and gives an insight about the top buy/sell prices of the currency.</p>
-              <p>The source data was mined out a public website that had the prices of the USD updated daily. Since this didn’t provided much information (like charts, percentage compared to the previous day, etc.), this project was born.</p>
-              <img src="assets/img/dollar-insights/2.jpg" class="img-fluid" alt="" />
-              <p>The technologies used here was principally Django, in combination with a exposed REST API mainly for two purposes: serve as the entry point for data mining and provide the data for the frontend. The persistence layer was made using Django Models and PostgreSQL for storing the entries. This application was uploaded to a Heroku instance, since it has no login, no authentication method was provided, but it is ready to be implemented with techniques such as JWT or OAuth.</p>
-              <p>For the data mining process, it uses a combination of Selenium Web Driver and BeautifulSoup4 for parsing the website and obtain the data. A process is called daily for obtaining the data and storing it into the persistence layer of the backend. This way it ensures that the application is losely coupled and allows making adjustments without breaking changes to the base code.</p>
-              <p>The frontend application is divided in two parts: one is the normal website made in Bootstrap/jQuery and the other was made on Ionic Framework 5, so this data can be requested on a browser as well as having a dedicated and standalone native application for iOS and Android devices. They both query the data from the backend service and show the same shared data in appropriate format. The website also supports responsive and look great on mobile devices.</p>
-              <p>One of the challenges making this complete full stack solution were making requests on a dynamic website that runs Javascript internally to obtain the data it displays. It would be easier to have an already exposed API to have this information in a more appropriate format (JSON) or be easier to query. As already noted, security on browsers and servers prevented doing that directly so the scrap solution was the selected solution.</p>
-              <img src="assets/img/dollar-insights/3.jpg" class="img-fluid" alt="" />
+            <img src="assets/img/dollar-insights/1.jpg" class="img-fluid mb-2" alt="Home screen">
+            <p>This project was developed for giving the user important details about the comparison between the USD and MXN. It compares its values and gives an insight about the top buy/sell prices of the currency.</p>
+            <p>The source data was mined out a public website that had the prices of the USD updated daily. Since this didn’t provided much information (like charts, percentage compared to the previous day, etc.), this project was born.</p>
+            <img src="assets/img/dollar-insights/2.jpg" class="img-fluid mb-2" alt="" />
+            <p>The technologies used here was principally Django, in combination with a exposed REST API mainly for two purposes: serve as the entry point for data mining and provide the data for the frontend. The persistence layer was made using Django Models and PostgreSQL for storing the entries. This application was uploaded to a Heroku instance, since it has no login, no authentication method was provided, but it is ready to be implemented with techniques such as JWT or OAuth.</p>
+            <p>For the data mining process, it uses a combination of Selenium Web Driver and BeautifulSoup4 for parsing the website and obtain the data. A process is called daily for obtaining the data and storing it into the persistence layer of the backend. This way it ensures that the application is losely coupled and allows making adjustments without breaking changes to the base code.</p>
+            <p>The frontend application is divided in two parts: one is the normal website made in Bootstrap/jQuery and the other was made on Ionic Framework 5, so this data can be requested on a browser as well as having a dedicated and standalone native application for iOS and Android devices. They both query the data from the backend service and show the same shared data in appropriate format. The website also supports responsive and look great on mobile devices.</p>
+            <p>One of the challenges making this complete full stack solution were making requests on a dynamic website that runs Javascript internally to obtain the data it displays. It would be easier to have an already exposed API to have this information in a more appropriate format (JSON) or be easier to query. As already noted, security on browsers and servers prevented doing that directly so the scrap solution was the selected solution.</p>
+            <img src="assets/img/dollar-insights/3.jpg" class="img-fluid mb-2" alt="" />
+            <div id="mobile" class="d-flex flex-wrap justify-content-between mb-2 mt-5">
+              <h2 class="font-weight-bold">Dollar Insights Mobile App</h2>
+              <div class="links-container">
+                <a href="https://github.com/flexocarpius/dollar-scrap-django" target="_blank" class="btn btn-secondary d-inline-flex align-items-center justify-content-center"><span>Repository</span>&nbsp;<i class="bi bi-github"></i></a>
+                <a href="https://dollar-web-app.herokuapp.com/" target="_blank" class="btn btn-outline btn-primary d-inline-flex align-items-center justify-content-center"><span>Demo</span>&nbsp;<i class="bi bi-window"></i></a>
+              </div>
+            </div>
+            <div class="mb-2">
+              <span class="badge bg-danger">Angular</span>
+              <span class="badge bg-info">Ionic</span>
+            </div>
+            <img src="assets/img/dollar-insights-ionic/1.jpg" class="img-fluid mb-2" alt="" />
+            <p>This is the mobile application for this service using Angular Ionic mobile app that was designed for multiplatform interaction (iOS, Android, Web). It uses the service as the backend through a REST API that also serves as the datasource for the front end.</p>
+            <p>It uses known patterns for managing the information from the device and for front end development (Components / Containers / Pages), with the NgRx store managgement library.</p>
+            <p>While it is made using web technologies (Angular 11) is fully supported for iOS and Android thanks to the Ionic Framework that brings the required drivers and components to use the mobile APIs from the application.</p>
+            <p></p>
+            <div class="row mt-4">
+              <div class="col-lg-4">
+              </div>
+              <div class="col-lg-4 offset-lg-4">
+                <div class="box-shadow pb-4 d-flex flex-column post-next">
+                  <a href="admin-dashboard-react.html">
+                    <div class="post-img mb-4"><img src="assets/img/admin-dashboard-react/thumb.jpg" class="img-fluid" alt=""></div>
+                    <h3 class="post-title px-4">Admin Dashboard</h3>
+                    <span class="px-4"><span>Next</span>&nbsp;<i class="bi bi-arrow-right"></i></span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-
         </div>
-
       </div>
-    </section><!-- End Portfolio Details Section -->
+    </section>
 
-  </main><!-- End #main -->
+  </main>
 
   <footer id="footer" class="footer">
-
     <div class="footer-top">
       <div class="container">
         <div class="row gy-4">
